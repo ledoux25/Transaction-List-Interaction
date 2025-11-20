@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  TrasactionListInteraction
+//  TransactionListInteraction
 //
 //  Created by Sanguo Joseph Ledoux on 9/24/25.
 //
@@ -14,7 +14,7 @@ struct Transaction : Equatable{
     let Amount: Double
     let spendOn: String
     let icon: String
-    let date: Date  
+    let date: Date
     let time: Date
     let paymentMethod: String
 }
@@ -31,7 +31,7 @@ struct ContentView: View {
             VStack(alignment: .leading){
                 Text("Transactions")
                     .padding(.bottom, 8)
-                    .foregroundStyle(.black.opacity(0.5))
+                    .foregroundStyle(.secondary)
                     .font(.title3.bold())
                 if selectedTransaction == nil {
                     TransactionsList(selectedTransaction: $selectedTransaction, IconNamespace: IconNamespace, TitleNamespace: TitleNamespace, PriceNameSpace: PriceNameSpace)
@@ -55,4 +55,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
